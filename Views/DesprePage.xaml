@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CursValutarApp.Views.DesprePage"
+             BackgroundColor="Aqua"
+             Title="Despre Aplicatie">
+    <VerticalStackLayout>
+        <Label 
+            Text="MAUI APP PDM"
+            VerticalOptions="Center" 
+            FontSize="40"
+            HorizontalOptions="Center" />
+
+        <HorizontalStackLayout>
+            <Image
+                Source="logo_about.png"
+                HeightRequest="200"
+                Margin="30,30,0,0"
+                HorizontalOptions="StartAndExpand"/>
+
+            <Label
+                Text="Author: Oana Andreea Ramona, 1115"
+                Margin="30,20,0,0"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
+        </HorizontalStackLayout>
+
+       
+    </VerticalStackLayout>
+</ContentPage>

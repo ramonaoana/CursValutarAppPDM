@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CursValutarApp.Views.ConvertorPage"
+             Title="Convertor Valutar">
+    <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto" ColumnDefinitions="*,*"
+          Padding="8,8,8,8">
+        
+        <Label VerticalOptions="Center"
+            Text="Converteste din"
+             />
+        <Picker
+            x:Name="pickerValutaSursa"
+            Title="Selectati valuta"
+            VerticalOptions="Center"
+            Grid.Column="1"  />
+
+        <Label Grid.Row="1"
+            Text="in"
+             />
+        <Picker 
+             Title="Selectati valuta"
+             x:Name="pickerValutaDest"
+             Grid.Row="1" Grid.Column="1"/>
+
+        <Label Grid.Row="2"
+             Text="Valoarea " />
+        <Entry 
+            x:Name="entryValoare"
+            Placeholder="Valoarea de convertit"
+            Grid.Row="2" Grid.Column="1"/>
+
+        <Button Grid.Row="3" Grid.ColumnSpan="2"
+                Clicked="ButtonConverteste_Clicked"
+            Text="Converteste" />
+        
+        <Label Grid.Row="4"
+             Text="Rezultat " />
+        <Entry 
+            x:Name="entryRezultat"
+            IsReadOnly="true" Grid.Row="4" Grid.Column="1"/>
+        
+    </Grid>
+</ContentPage>

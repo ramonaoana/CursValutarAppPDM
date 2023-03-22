@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CursValutarApp.Views.MainPage">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Convertor" Clicked="ToolbarItemConvertor_Clicked" Order="Secondary"/>
+        <ToolbarItem Text="Istoric" Clicked="ToolbarItemIstoric_Clicked" Order="Secondary"/>
+        <ToolbarItem Text="Setari" Clicked="ToolbarItemSetari_Clicked" Order="Secondary"/>
+        <ToolbarItem Text="Despre" Clicked="ToolbarItemDespre_Clicked" Order="Secondary"/>
+    </ContentPage.ToolbarItems>
+
+    <ListView x:Name="listViewCurs">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <HorizontalStackLayout Padding="8">
+                        <Image Source="{Binding Flag}"/>
+                        <Label Text="{Binding Multiplier}"/>
+                        <Label Text="{Binding Currency, StringFormat=' {0} = '}"/>
+                        <Label Text="{Binding Value, StringFormat=' {0} RON '}"/>
+                    </HorizontalStackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+        
+    </ListView>
+
+</ContentPage>
